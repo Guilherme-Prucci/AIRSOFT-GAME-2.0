@@ -29,7 +29,12 @@ public class Arma_controle : MonoBehaviour
             Shooting = true;
         }
 
-        backSpinDrag += Input.GetAxis("Mouse ScrollWheel") * 10f;
+        if (Input.GetAxis("Mouse ScrollWheel") != 0)
+        {
+            backSpinDrag += Input.GetAxis("Mouse ScrollWheel") * 10f;
+            
+            //controller.GetComponent<Textos>().SetBackSpinDragHud(backSpinDrag);
+        }
 
         if (Input.GetKeyDown(KeyCode.R)){
             controller.GetComponent<Game_Controller>().Recarregar();

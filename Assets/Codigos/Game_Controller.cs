@@ -60,6 +60,7 @@ public class Game_Controller : MonoBehaviour
         qntMunicao = 0f;
         hud.GetComponent<Textos>().setqntMunicao(qntMunicao);
         hud.GetComponent<Textos>().setmaxMunicao(maxMunicao);
+        hud.GetComponent<Textos>().SetTipoMunicaoHud((int)tipo);
     }
 
     public void Recarregar()
@@ -113,5 +114,10 @@ public class Game_Controller : MonoBehaviour
         hud.GetComponent<Textos>().setqntMunicao(qntMunicao);
         hud.GetComponent<Textos>().setmaxMunicao(maxMunicao);
         reloading = false;
+    }
+
+    public float getTipoAtualMunicao()
+    {
+        return tipoAtualMunicao;
     }
 }
